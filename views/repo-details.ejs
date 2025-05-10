@@ -1,0 +1,19 @@
+<h1>Інформація про репозиторій: <%= repoInfo.name %></h1>
+<p><strong>Опис:</strong> <%= repoInfo.description || 'Немає опису' %></p>
+<p><strong>URL:</strong> <a href="<%= repoInfo.html_url %>"><%= repoInfo.html_url %></a></p>
+<p><strong>Створено:</strong> <%= new Date(repoInfo.created_at).toLocaleString() %></p>
+<p><strong>Оновлено:</strong> <%= new Date(repoInfo.updated_at).toLocaleString() %></p>
+<p><strong>Мови:</strong> <%= languages.join(', ') || 'Немає даних' %></p>
+
+<h2>Останні коміти</h2>
+<ul>
+  <% commits.forEach(commit => { %>
+    <li>
+      <strong><%= commit.commit.author.date %></strong> —
+      <code><%= commit.sha.slice(0, 7) %></code> —
+      <%= commit.commit.message %>
+    </li>
+  <% }); %>
+</ul>
+
+<a href="/">Назад до репозиторіїв</a>

@@ -1,0 +1,11 @@
+<h1>Репозиторії користувача <%= username %></h1>
+<ul>
+  <% repos.forEach(repo => { %>
+    <li>
+      <a href="/repo/<%= username %>/<%= repo.name %>">
+        <%= repo.name %>
+      </a>
+    </li>
+  <% }); %>
+</ul>
+<a href="/">Назад</a>
