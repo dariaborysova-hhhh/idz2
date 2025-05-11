@@ -10,7 +10,7 @@
   <% commits.forEach(commit => { %>
     <li>
       <strong><%= commit.commit.author.date %></strong> —
-      <code><%= commit.sha.slice(0, 7) %></code> —
+      <code><%= commit.sha %></code> —
       <%= commit.commit.message %>
     </li>
   <% }); %>
