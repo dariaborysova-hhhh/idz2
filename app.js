@@ -42,7 +42,7 @@ app.get('/repo/:username/:repo', async (req, res) => {
 
     res.render('repo-details', {
       repoInfo,
-      commits: commits.slice(0, 10),
+      commits: commits,
       languages: Object.keys(languages),
     });
   } catch (error) {
