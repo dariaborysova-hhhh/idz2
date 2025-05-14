@@ -4,12 +4,12 @@
     "main": "app.js",
     "type": "module",
     "scripts": {
-      "start": "node app.js"
+        "start": "node app.js"
     },
     "dependencies": {
-      "ejs": "^3.1.6",
-      "express": "^4.17.3",
-      "node-fetch": "^3.3.1"
+        "dotenv": "^16.5.0",
+        "ejs": "^3.1.10",
+        "express": "^4.21.2",
+        "node-fetch": "^3.3.1"
     }
-  }
-  
+}
